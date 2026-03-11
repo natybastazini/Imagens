@@ -21,7 +21,33 @@
     <h2 style="color: blueviolet;">Alterando a largura e altura da imagem com configurações CCS Inline</h2>
     <img src="img/vida_de_desenvolvedor_17.gif" alt="Quando o chefe informa que terá aumento ao finalizar o código!" style="width: 300px; height: 300px;">
 
-    <h2>Utilizando links para abrir a página do SENAI</h2>
+    <h2>Utilizando links para abrir a página do Corinthians</h2>
     <a href="https://www.corinthians.com.br/">Página Corinthians</a>
+
+    <!-- Utilizando a tag media, para responder e trocar a imagem, de acordo com a largura do dispositivo -->
+    <h2> Troca imagem de acordo com a largura do dispositivo</h2>
+    <picture>
+        <!-- Mostra imagem quando largura do dispositivo for MAIOR que 650 px -->
+        <source media="(min-width:650px)" srcset="img/vida_de_desenvolvedor_17.gif">
+        <!-- Mostra imagem quando largura do dispositivo for MAIOR que 450 px -->
+        <source media="(min-width:450px)" srcset="img/coding.gif">
+        <!-- Imagem Padrão do Picture -->
+        <img src="img/Aula07_Map_Computador_Celular.jpg" alt="Imagem computador e celular">
+    </picture>
+
+    <h2>Construir um mapa clicável dentro da imagem, através do recurso MAP!!</h2>
+
+    <img src="img/Aula07_Map_Computador_Celular.jpg" alt="Imagem mesa de café com notebook e celular." usemap="#mesacompcelular">
+
+    <!-- Construção de mapa de cliques, que será aplicado sobre a imagem acima  -->
+    <map name="mesacompcelular">
+        <!-- Criar a área de clique sobre o Notebook -->
+        <area shape="rect" coords="31,44,275,350" href="https://www.apple.com/br/shop/buy-mac" alt="Notebook" target="_blank">
+        <!-- Criar área clicável para permitir navegar ao clicar no café em uma nova guia (target_blank) -->
+        <area shape="circle" coords="345,300,40" href="" alt="Café" target="_blank">
+        <!--  -->
+        <area shape="poly" coords="290,170,335,170,320,250" href="https://www.apple.com/br/shop/buy-iphone" alt="Celular" target="_blank">
+    </map>
+
 </body>
 </html>
